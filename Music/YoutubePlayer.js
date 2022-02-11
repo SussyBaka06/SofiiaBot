@@ -1,3 +1,5 @@
+const bot = require("lavaplayer") // required module
+const Discord = require("discord.js") //required module
 const ytdl = require('ytdl-core');
 const {
 	AudioPlayerStatus,
@@ -35,3 +37,8 @@ module.exports = {
 	10: '🔟', '#': '#️⃣', '*': '*️⃣',
 	'!': '❗', '?': '❓',
 };
+
+if(message.content === "!play") {
+    music.play("Im on my way", message.author) // bot join the voice channel and play song 
+     return message.channel.send("Im now playing I'm on my way")
+}
