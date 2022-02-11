@@ -9,3 +9,9 @@ client.once('Ready!', () => {
 
 client.login(token);
 
+const emojiCharacters = require('./emojiCharacters.js');
+
+console.log(emojiCharacters.a); // 🇦
+console.log(emojiCharacters[10]); // 🔟
+console.log(emojiCharacters['!']); // ❗
+
