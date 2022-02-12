@@ -42,3 +42,35 @@ if(message.content === "!play") {
     music.play("Im on my way", message.author) // bot join the voice channel and play song 
      return message.channel.send("Im now playing I'm on my way")
 }
+const ytdl = require("discord-ytdl-core");
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
+client.on("ready", () => {
+    console.log("ready")
+});
+
+client.on("message", msg => {
+    if (msg.author.bot || !msg.guild) return;
+    if (msg.content === "!play") {
+        if (!msg.member.voice.channel) return msg.channel.send("You're not in a voice channel?");
+        let stream = ytdl("https://www.youtube.com/watch?v=QnL5P0tFkwM", {
+            filter: "audioonly",
+            opusEncoded: true,
+            encoderArgs: ['-af', 'bass=g=10,dynaudnorm=f=200']
+        });
+        
+        msg.member.voice.channel.join()
+        .then(connection => {
+            let dispatcher = connection.play(stream, {
+                type: "opus"
+            })
+            .on("finish", () => {
+                msg.guild.me.voice.channel.leave();
+            })
+        });
+    }
+});
+
+client.login("TOKEN");
+Unkn
