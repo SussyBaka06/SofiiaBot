@@ -1,1 +1,3 @@
-<div><h1 align="center" font-family: 'Dancing Script', cursive; height="180">SofiiaBot</h1></div>
+<background color="#8c00ff">
+
+</background>
