@@ -1,1 +1,1 @@
-<div><h1 align=center link rel="preconnect" href="https://fonts.googleapis.com" height="180">SofiiaBot</h1></div>
+<div><h1 align="center" font-family: 'Dancing Script', cursive; height="180">SofiiaBot</h1></div>
