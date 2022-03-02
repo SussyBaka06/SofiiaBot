@@ -20,11 +20,9 @@ const config  = require("./config.json");
 
 const application = require("./Aplicattion");
 
+const express = require("./express");
+
 const app = express(); 
-
-app.use(bodyParser.json());
-
-app.use(bodyParser.urlencoded({ extended: true }));
 
 client.login(process.env.token);
 
