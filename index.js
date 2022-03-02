@@ -16,6 +16,8 @@ app.listen(3000, () => {
 
 const discord = require("discord.js");
 
+const config  = require("./config.json");
+
 client.login(process.env.token);
 
 
