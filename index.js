@@ -12,8 +12,10 @@ app.get('/', (req, res) => {
 
 app.listen(3000, () => {
   console.log('server started :3');
-
-  client.login(process.env.token);
-
 });
+
+const discord = require("discord.js");
+
+client.login(process.env.token);
+
 
