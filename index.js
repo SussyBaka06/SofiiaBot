@@ -18,6 +18,8 @@ const discord = require("discord.js");
 
 const config  = require("./config.json");
 
+const application = require("./Aplicattion");
+
 client.login(process.env.token);
 
 
