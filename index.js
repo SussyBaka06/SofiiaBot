@@ -1,4 +1,5 @@
 const { REST } = require('@discordjs/rest');
+const { Client, Intents } = require('discord.js');
 const { Routes } = require('discord-api-types/v9');
 const { token } = require('./config.json');
 const express = require('express');
@@ -24,6 +25,23 @@ const express = require("./express");
 
 const app = express(); 
 
+
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+
+client.once('Ready!', () => {
+	console.log('Ready!');
+});
+
+client.login(token);
+
+const emojiCharacters = require('./emojiCharacters.js');
+
+console.log(emojiCharacters.a); // 🇦
+console.log(emojiCharacters[10]); // 🔟
+console.log(emojiCharacters['!']); // ❗
+
 client.login(process.env.token);
+
+
 
 
