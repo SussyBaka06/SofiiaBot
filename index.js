@@ -32,8 +32,6 @@ client.once('Ready!', () => {
 	console.log('Ready!');
 });
 
-client.login(token);
-
 const emojiCharacters = require('./emojiCharacters.js');
 
 console.log(emojiCharacters.a); // 🇦
@@ -41,6 +39,9 @@ console.log(emojiCharacters[10]); // 🔟
 console.log(emojiCharacters['!']); // ❗
 
 client.login(process.env.token);
+
+client.login(token);
+
 
 
 
