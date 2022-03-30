@@ -53,7 +53,7 @@ client.on("ready", () => {
 client.on("message", msg => {
     if (msg.author.bot || !msg.guild) return;
     if (msg.content === "!play") {
-        if (!msg.member.voice.channel) return msg.channel.send("You're not in a voice channel?");
+        if (!msg.member.voice.channel) return msg.channel.send("Não te encontrei na call ):");
         let stream = ytdl("https://www.youtube.com/watch?v=QnL5P0tFkwM", {
             filter: "audioonly",
             opusEncoded: true,
@@ -81,7 +81,7 @@ const commands = [{
         {
             name: "query",
             type: "STRING",
-            description: "Pesquise",
+            description: "Pesquise a musica",
             required: true
         }
     ]
