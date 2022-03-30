@@ -33,12 +33,14 @@ const STRING = {
     Crewmate = "Clewmate",
     Apple = "Apple",
     PS4 = "PS4",
-    Switch = "Nintendo Switch"
+    Switch = "Nintendo Switch",
+    Discord= "Discord"
 };
 
 presence.on(setInterval(() => {
 h = "5"
 }, interval))
+
 
 
 
